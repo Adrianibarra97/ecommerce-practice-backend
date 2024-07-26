@@ -3,7 +3,7 @@ package ecommerce.backend.repository
 import ecommerce.backend.domain.User
 
 
-class UserRepository { // : CrudRepository<User, Int> {
+open class UserRepository { // : CrudRepository<User, Int> {
   
   private val objects: MutableList<User> = mutableListOf()
   

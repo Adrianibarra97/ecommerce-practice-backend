@@ -16,10 +16,18 @@ class ApplicationBootstrap() : InitializingBean {
   // Users
   val adrian: User = User("", "", 23.toBigDecimal())
   
-  override fun afterPropertiesSet() {}
+  override fun afterPropertiesSet() {
+    
+    // Users
+    adrian.apply {
+      this.username = "adri97@gmail.com"
+      this.password = "adri1234"
+      this.money = 130002323.toBigDecimal()
+    }
+  }
   
   @Bean
-  fun setUserRepository(): UserRepository = UserRepository().apply {
+  fun setUserRepo(): UserRepository = userRepository.apply {
     this.save(adrian)
   }
 }
