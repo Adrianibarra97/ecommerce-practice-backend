@@ -28,9 +28,9 @@ val kotestVersion = "5.8.0"
 dependencies {
   //implementation(kotlin("stdlib"))
   implementation("org.springframework.boot:spring-boot-starter")
-  //implementation("org.springframework.boot:spring-boot-starter-web")
-  //implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-  //implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+  implementation("org.springframework.boot:spring-boot-starter-web")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   //implementation("org.springframework.boot:spring-boot-starter-hateoas")
   implementation("org.springframework.boot:spring-boot-starter-data-rest")
   implementation("org.springframework.boot:spring-boot-starter-validation")
