@@ -20,7 +20,7 @@ class UserService {
     val user: User = this.repository.findByUsername(username)
     return UserDTO(
       user.id,
-      user.username!!,
+      user.username,
       user.money.toDouble()
     )
   }
