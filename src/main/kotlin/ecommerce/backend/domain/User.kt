@@ -22,10 +22,10 @@ class User {
   var id: Int = 0
   
   @Column(length = 50)
-  var username: String ?= null
+  var username: String = ""
   
   @Column(length = 50)
-  var password: String ?= null
+  var password: String = ""
   
   @Column
   var money: BigDecimal = 0.toBigDecimal()

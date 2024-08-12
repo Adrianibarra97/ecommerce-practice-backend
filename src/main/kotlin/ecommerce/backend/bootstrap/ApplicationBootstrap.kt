@@ -24,8 +24,8 @@ class ApplicationBootstrap() : InitializingBean {
       this.money = 130002323.toBigDecimal()
     }
     
-    userRepository.apply {
-      this.save(adrian)
-    }
+    this.userRepository.saveAll(listOf(
+      adrian
+    ))
   }
 }

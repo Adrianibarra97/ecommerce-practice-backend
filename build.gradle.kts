@@ -26,25 +26,25 @@ val mockkVersion = "1.13.9"
 val kotestVersion = "5.8.0"
 
 dependencies {
-  //implementation(kotlin("stdlib"))
+  //implementation(kotlin("stdlib")) // Comment
   implementation("org.springframework.boot:spring-boot-starter")
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-  //implementation("org.springframework.boot:spring-boot-starter-hateoas")
+  //implementation("org.springframework.boot:spring-boot-starter-hateoas") // Comment
   implementation("org.springframework.boot:spring-boot-starter-data-rest")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
-  //implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  //implementation("com.fasterxml.jackson.module:jackson-module-kotlin") // Comment
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.2")
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2")
   implementation("org.springdoc:springdoc-openapi-starter-common:2.2.0")
   implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
-  //implementation("org.uqbar-project:geodds-xtend:1.0.3")
-  //implementation("com.google.code.gson:gson:2.8.9")
+  //implementation("org.uqbar-project:geodds-xtend:1.0.3") // Comment
+  //implementation("com.google.code.gson:gson:2.8.9") // Comment
   
   developmentOnly("org.springframework.boot:spring-boot-devtools")
-  //developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+  //developmentOnly("org.springframework.boot:spring-boot-docker-compose") // Comment
   
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("io.mockk:mockk:${mockkVersion}")
