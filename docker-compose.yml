@@ -25,6 +25,13 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
 
+  backend:
+    build: .
+    ports:
+      - "9000:9000"
+    links:
+      - postgres
+
 volumes:
   postgres-data:
   pgadmin-data:
