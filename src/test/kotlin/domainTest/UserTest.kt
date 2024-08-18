@@ -1,6 +1,7 @@
-package ecommerce.backend.domianTest
+package domainTest
 
 import ecommerce.backend.domain.User
+import ecommerce.backend.dto.UserDTO
 import io.kotest.core.spec.IsolationMode
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.bigdecimal.shouldBeZero
@@ -31,5 +32,21 @@ class UserTest : DescribeSpec({
       //Assert
       adrian.totalMonetary().shouldBeZero()
     }
+  }
+  
+  it("Create a User from the JSON input.") {
+    //Arrange
+    val userDTO: UserDTO = UserDTO(
+      1,
+      "Adrian",
+      500.toDouble()
+    )
+    
+    //Act
+    val newUser: User = User.fromJSON(userDTO)
+    
+    //Assert
+    newUser.id.shouldBe(1)
+    newUser.money.shouldBe(500.0.toBigDecimal())
   }
 })

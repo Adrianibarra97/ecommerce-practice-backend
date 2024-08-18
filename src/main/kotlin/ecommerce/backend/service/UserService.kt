@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
 class UserService {
   
   @Autowired
-  private lateinit var repository: UserRepository
+  lateinit var repository: UserRepository
   
   @Transactional(Transactional.TxType.NEVER)
   fun getMoneyByUserId(username: String): UserDTO {
